@@ -13,7 +13,7 @@ class CreatingAPostTest < Capybara::Rails::TestCase
 
       # Then a new post should be created and displayed
       page.text.must_include "Post was successfully created"
-      page.text.must_include "hThis is how I learned to make Rails apps"
+      page.text.must_include "This is how I learned to make Rails apps"
     end
   end
 end
