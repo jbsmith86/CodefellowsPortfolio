@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Joel's Portfolio" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Joel Smith" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -13,6 +13,19 @@
   </head>
 
   <body>
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h1><%= link_to "Joel Smith", root_path %></a></h1>
+        </li>
+      </ul>
+    <section class="top-bar-section">
+      <ul>
+        <li class="divider"></li>
+        <li><%= link_to "Blog", posts_path %></li>
+      </ul>
+    </section>
+    </nav>
     <div class ="columns large-8">
       <%= yield %>
     </div>
