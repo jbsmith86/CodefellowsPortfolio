@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.0.2'
-gem 'sqlite3'
+
+group :development, :test do
+  gem 'sqlite3'
+end
 
 gem 'coffee-rails', '~> 4.0.0'
 gem 'foundation-rails', github: 'codefellows/foundation-rails'
@@ -11,4 +14,12 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
-gem 'minitest-rails-capybara'
+gem 'minitest-rails'
+group :test do
+  gem 'minitest-rails-capybara'
+end
+
+group :production do
+  gem 'unicorn'
+  gem 'pg'
+end
