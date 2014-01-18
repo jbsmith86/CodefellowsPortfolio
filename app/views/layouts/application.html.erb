@@ -11,9 +11,7 @@
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
-
-  <body>
-    <nav class="top-bar">
+  <nav class="top-bar">
       <ul class="title-area">
         <li class="name">
           <h1><%= link_to "Joel Smith", root_path %></a></h1>
@@ -26,8 +24,9 @@
       </ul>
     </section>
     </nav>
+  <body>
     <div class ="columns large-8">
-      <%= yield %>
+        <%= yield %>
     </div>
   </body>
 </html>
