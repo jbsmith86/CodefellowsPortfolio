@@ -14,7 +14,7 @@ namespace :server do
     system '/etc/init.d/nginx stop'
     system 'cd /var/www/jbs; rake assets:precompile RAILS_ENV=production'
     system 'cd /var/www/jbs; rake db:migrate RAILS_ENV=production'
-    system 'cd /var/www/jbs; bundle install RAILS_ENV=production'
+    system 'cd /var/www/jbs; bundle install'
     system 'cd /var/www/jbs; bundle exec unicorn -c /var/www/jbs/config/unicorn.rb -d -E production -D'
     system '/etc/init.d/nginx start'
   end
