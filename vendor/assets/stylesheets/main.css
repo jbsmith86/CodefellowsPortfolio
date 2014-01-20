@@ -649,11 +649,11 @@ textarea {
 							color: #fff;
 						}
 					.social-icon a.github {
-						background-color: #000000;
+						background-color: #4c4c4c;
 						color: #fff;
 					}
 						.social-icon a.github:hover {
-							background-color: #595959;
+							background-color: #000000;
 							color: #fff;
 						}
 					.social-icon a.dribbble {
