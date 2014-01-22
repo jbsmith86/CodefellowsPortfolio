@@ -21,12 +21,18 @@
       <ul>
         <li class="divider"></li>
         <li><%= link_to "Blog", posts_path %></li>
+        <li><%= link_to "Projects", projects_path %></li>
       </ul>
     </section>
     </nav>
+  <% flash.each do |key, value| %>
+    <div class="alert-box round <%= flash_class(key) %>">
+      <%= value %>
+    </div>
+  <% end %>
   <body>
     <div class ="columns large-8">
-        <%= yield %>
+      <%= yield %>
     </div>
   </body>
 </html>
