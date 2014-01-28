@@ -2,6 +2,9 @@ ENV["RAILS_ENV"] = "test"
 require File.expand_path("../../config/environment", __FILE__)
 require "rails/test_help"
 require "minitest/rails/capybara"
+require 'simplecov'
+
+SimpleCov.start 'rails'
 
 # To add Capybara feature tests add `gem "minitest-rails-capybara"`
 # to the test group in the Gemfile and uncomment the following:
@@ -13,7 +16,7 @@ require "minitest/rails/capybara"
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
   fixtures :all
-
+  SimpleCov.start 'rails'
   # Add more helper methods to be used by all tests here...
   def sign_in(role = :editor)
     visit new_user_session_path

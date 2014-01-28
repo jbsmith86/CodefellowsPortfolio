@@ -24,8 +24,10 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'minitest-rails'
 gem 'travis'
+
 group :test do
   gem 'minitest-rails-capybara'
+  gem 'simplecov', :require => false
 end
 
 group :production do

@@ -1,0 +1,23 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "/Users/joel/Dropbox/Codefellows/portfolio/app/models/post.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/joel/Dropbox/Codefellows/portfolio/app/models/project.rb": [
+        1,
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1390887340
+  }
+}
