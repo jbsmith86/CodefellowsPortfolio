@@ -3,6 +3,8 @@ require "test_helper"
 class DeletingAPostTest < Capybara::Rails::TestCase
   feature "Deleting a Post" do
     scenario "post is deleted with a click" do
+      sign_in
+
       # Given an existing post
       visit posts_path
 
