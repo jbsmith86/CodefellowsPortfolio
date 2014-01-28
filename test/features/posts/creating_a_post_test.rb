@@ -17,7 +17,7 @@ class CreatingAPostTest < Capybara::Rails::TestCase
       page.text.must_include "Post was successfully created"
       page.text.must_include posts(:cr).title
       page.has_css? "#author"
-      page.text.must_include users(:starsky).email # Use your fixture name here.
+      page.text.must_include users(:author).email # Use your fixture name here.
       page.text.must_include "Status: Unpublished"
     end
   end

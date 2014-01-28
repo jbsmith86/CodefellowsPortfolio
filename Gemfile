@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.0.2'
 
-group :development do
+group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
 end
@@ -12,6 +12,7 @@ group :development, :test do
 end
 
 gem 'devise'
+gem 'pundit'
 
 gem 'coffee-rails', '~> 4.0.0'
 gem 'foundation-rails'
