@@ -4,14 +4,39 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Joel's Portfolio" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Joel Byron Smith" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
-
+  <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h1><%= link_to "Joel Byron Smith", root_path %></a></h1>
+        </li>
+      </ul>
+    <section class="top-bar-section">
+      <ul>
+        <li class="divider"></li>
+        <li><%= link_to "Blog", posts_path %></li>
+        <li><%= link_to "Projects", projects_path %></li>
+        <li class="divider"></li>
+        <% if current_user %>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li><%= link_to "Log In", new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </section>
+  </nav>
+  <% flash.each do |key, value| %>
+    <div class="alert-box round <%= flash_class(key) %>">
+      <%= value %>
+    </div>
+  <% end %>
   <body>
     <div class ="columns large-8">
       <%= yield %>

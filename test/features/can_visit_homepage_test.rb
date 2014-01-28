@@ -1,9 +1,8 @@
 require "test_helper"
 
 class CanVisitHomepageTest < Capybara::Rails::TestCase
-  test "sanity" do
+  test "Visit home page" do
     visit root_path
     assert_content page, "Joel Smith"
-    refute_content page, "Goobye All!"
   end
 end
