@@ -1,0 +1,11 @@
+development:
+  consumer_key: 'placeholder'
+  consumer_secret: 'placeholder'
+  
+test:
+  consumer_key: 'placeholder'
+  consumer_secret: 'placeholder'
+  
+production:
+  consumer_key: 'placeholder'
+  consumer_secret: 'placeholder'
