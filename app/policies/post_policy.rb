@@ -17,16 +17,12 @@ class PostPolicy < ApplicationPolicy
   def destroy?
     if @user
       @user.editor? || @post.author.email == @user.email
-    else
-      false
     end
   end
 
   def update?
     if @user
       @user.editor? || @post.author.email == @user.email
-    else
-      false
     end
   end
 end

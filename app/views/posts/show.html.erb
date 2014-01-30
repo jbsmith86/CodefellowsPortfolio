@@ -22,3 +22,19 @@
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+<br/><br/>
+<% @post.comments.each do |comment| %>
+  <% if comment.approved %>
+    Name: <%= comment.author %><br/>
+    Website: <%= comment.author_url %><br/>
+    Email: <%= comment.author_email %><br/>
+    Comment: <%= comment.content %>
+  <% end %>
+<% end %>
+<br/><br/>
+Add a comment: <br/><br/>
+<% if current_user %>
+  <%= render 'comments/comment_form' %>
+<% else %>
+  <%= link_to 'Sign In with Twitter', '/users/auth/twitter' %>
+<% end %>

@@ -1,0 +1,17 @@
+<%= form_for(@comment) do |f| %>
+  <%= f.label :author, 'Name' %>
+  <%= f.text_field :author %><br/>
+  <%= f.label :author_url, 'Url' %>
+  <%= f.text_field :author_url %><br/>
+  <%= f.label :author_email, 'Email' %>
+  <%= f.text_field :author_email %><br/>
+  <%= f.label :content, 'Comment' %>
+  <%= f.text_field :content %><br/>
+  <%= f.hidden_field :post_id, :value => params[:id] %>
+  <% if CommentPolicy.new(current_user, @comment).approver? %>
+    <br/>
+    <%= f.check_box :approved %><%= f.label :approved, 'Approved' %><br/><br/>
+  <% end %>
+  <%= submit_tag 'Create Comment' %>
+
+<% end %>

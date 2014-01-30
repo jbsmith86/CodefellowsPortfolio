@@ -12,6 +12,7 @@ group :development, :test do
 end
 
 gem 'devise'
+gem 'omniauth-twitter'
 gem 'pundit'
 
 gem 'coffee-rails', '~> 4.0.0'
