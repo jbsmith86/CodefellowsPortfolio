@@ -19,7 +19,7 @@ class CreatingAPostTest < Capybara::Rails::TestCase
       sign_in(:editor)
 
       # When I visit the new page
-      visit new_comment_path
+      visit post_path(posts(:post_example))
 
       # There is a checkbox for published
       page.must_have_field('Approved')
@@ -31,6 +31,8 @@ class CreatingAPostTest < Capybara::Rails::TestCase
       fill_in "Comment", with: comments(:comment).content
       check "Approved"
       click_on "Create Comment"
+
+      visit post_path(posts(:post_example))
 
       # Then the published post should be shown
       page.text.must_include "Status: Approved"

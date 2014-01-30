@@ -29,6 +29,14 @@
     Website: <%= comment.author_url %><br/>
     Email: <%= comment.author_email %><br/>
     Comment: <%= comment.content %>
+    <p id="status">
+      <b>Status:</b>
+      <% if comment.approved %>
+        <%= "Approved" %>
+      <% else %>
+        <%= "Not Approved" %>
+      <% end %>
+    </p>
   <% end %>
 <% end %>
 <br/><br/>
