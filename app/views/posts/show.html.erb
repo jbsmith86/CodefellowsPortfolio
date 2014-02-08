@@ -24,7 +24,8 @@
 <%= link_to 'Back', posts_path %>
 <br/><br/>
 <% @post.comments.each do |comment| %>
-  <% if comment.approved %>
+
+  <% if comment.approved || current_user.editor? %>
     Name: <%= comment.author %><br/>
     Website: <%= comment.author_url %><br/>
     Email: <%= comment.author_email %><br/>
@@ -37,6 +38,9 @@
         <%= "Not Approved" %>
       <% end %>
     </p>
+    <% if comment.author_email == current_user.email || current_user.editor? %>
+      <%= link_to 'Edit', edit_comment_path(comment) %>
+    <% end %>
   <% end %>
 <% end %>
 <br/><br/>
