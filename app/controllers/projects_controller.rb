@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   end
 
   def new
-     @project = Project.new
+    @project = Project.new
   end
 
   def edit
@@ -14,12 +14,10 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    if @project.save
-      flash[:notice] = "Project has been created."
-      redirect_to @project
-    else
-      flash.now[:error] =  "Project could not be saved."
-      render :new
+    @project.save
+    respond_to do |format|
+      format.html { redirect_to @project }
+      format.js
     end
   end
 

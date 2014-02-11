@@ -7,7 +7,7 @@
 
 <p>
   <strong>Body:</strong>
-  <%= @post.body %>
+  <%= markdown(@post.body) %>
 </p>
 
 <p id="author">
@@ -38,8 +38,10 @@
         <%= "Not Approved" %>
       <% end %>
     </p>
-    <% if comment.author_email == current_user.email || current_user.editor? %>
-      <%= link_to 'Edit', edit_comment_path(comment) %>
+    <% if current_user %>
+      <% if comment.author_email == current_user.email || current_user.editor? %>
+        <%= link_to 'Edit', edit_comment_path(comment) %>
+      <% end %>
     <% end %>
   <% end %>
 <% end %>

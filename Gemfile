@@ -15,6 +15,8 @@ gem 'devise'
 gem 'omniauth-twitter'
 gem 'pundit'
 
+gem 'redcarpet'
+
 gem 'coffee-rails', '~> 4.0.0'
 gem 'foundation-rails'
 gem 'jquery-rails'
