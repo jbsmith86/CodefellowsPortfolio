@@ -14,20 +14,27 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    @project.save
     respond_to do |format|
-      format.html { redirect_to @project }
-      format.js
+      format.html do
+        @project.save
+        redirect_to @project
+      end
+      format.js do
+        @project.save
+      end
     end
   end
 
   def update
-     @project = Project.find(params[:id])
-
-    if @project.update_attributes(project_params)
-      redirect_to @project, notice: 'Project was successfully updated.'
-    else
-      render :edit
+    @project = Project.find(params[:id])
+    respond_to do |format|
+      format.html do
+        @project.update_attributes(project_params)
+        redirect_to @project
+      end
+      format.js do
+        @project.update_attributes(project_params)
+      end
     end
   end
 
