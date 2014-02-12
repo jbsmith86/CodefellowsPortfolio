@@ -16,6 +16,7 @@ gem 'omniauth-twitter'
 gem 'pundit'
 
 gem 'redcarpet'
+gem 'pygments.rb'
 
 gem 'coffee-rails', '~> 4.0.0'
 gem 'foundation-rails'
