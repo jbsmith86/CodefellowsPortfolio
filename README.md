@@ -8,4 +8,4 @@ This is a basic portfolio website used for the first iteration of JoelByronSmith
 
 Added locales, markdown and time zones to Posts:
 
-[http://i.imgur.com/ZWwhcWu.png]
+http://i.imgur.com/ZWwhcWu.png
