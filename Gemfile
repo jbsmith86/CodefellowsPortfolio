@@ -14,6 +14,7 @@ end
 gem 'devise'
 gem 'omniauth-twitter'
 gem 'pundit'
+gem 'browser-timezone-rails'
 
 gem 'redcarpet'
 gem 'pygments.rb'

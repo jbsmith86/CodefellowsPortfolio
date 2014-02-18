@@ -12,7 +12,9 @@
 
 <p id="author">
   <b>By:</b>
-  <%= @post.author.email %>
+  <%= @post.author.email %></br>
+  <b>At:</b>
+  <%= I18n.localize @post.created_at, format: :short %>
 </p>
 
 <p id="status">

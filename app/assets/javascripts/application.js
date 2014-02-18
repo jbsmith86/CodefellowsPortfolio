@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree ../../../vendor/assets/javascripts
+//= require browser_timezone_rails/application.js
 //= require foundation
 //= require turbolinks
 //= require_tree .
