@@ -1,11 +1,10 @@
 Joel Byron Smith
 ==============
+[![Build Status](https://travis-ci.org/jbsmith86/JoelByronSmith.png?branch=master)](https://travis-ci.org/jbsmith86/JoelByronSmith)
 
 This is a basic portfolio website used for the first iteration of JoelByronSmith.com
 
-[![Build Status](https://secure.travis-ci.org/jbsmith86/CodefellowsPortfolio.png)](http://travis-ci.org/jbsmith86/CodefellowsPortfolio)
 
-
-Added locales, markdown and time zones to Posts:
+2/18/14 Added locales, markdown and time zones to Posts:
 
 ![alt text](http://i.imgur.com/ZWwhcWu.png "Screenshot")
